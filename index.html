@@ -1,19 +1,699 @@
 <!doctype html>
-<html lang="en">
+<html lang="es" data-bs-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Marea Azul · Sáb 12/12 · Arena Costanera</title>
+    <meta
+      name="description"
+      content="Marea Azul: una noche de pop urbano e indie con el estadio convertido en el fondo del mar. Sábado 12 de diciembre, Arena Costanera, Buenos Aires."
+    />
+    <link rel="icon" href="img/svg/logo-ola.svg" type="image/svg+xml" />
+
+    <!-- Tipografías: Unbounded (títulos) e Inter (textos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unbounded:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5.3 + Bootstrap Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos propios: van después de Bootstrap para pisarlo -->
+    <link href="css/styles.css" rel="stylesheet" />
   </head>
 
-  <body>
-    <h1>Hello, world!</h1>
+  <body data-bs-spy="scroll" data-bs-target="#nav-principal" data-bs-offset="96" tabindex="0">
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar navbar-expand-lg fixed-top nav-marea" aria-label="Navegación principal">
+      <div class="container-xxl">
+        <a class="navbar-brand logo" href="#inicio">
+          <img src="img/svg/logo-ola.svg" alt="" width="34" height="17" />
+          <span>MAREA AZUL</span>
+        </a>
+        <button
+          class="navbar-toggler nav-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav-principal"
+          aria-controls="nav-principal"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="nav-principal">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#show">El show</a></li>
+            <li class="nav-item"><a class="nav-link" href="#lineup">Lineup</a></li>
+            <li class="nav-item"><a class="nav-link" href="#entradas">Entradas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#merch">Merch</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+              <a class="btn btn-ticket btn-ticket-sm" href="#entradas">Entradas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <header id="inicio" class="hero">
+        <div class="hero-agua" aria-hidden="true"></div>
+        <div class="hero-burbujas" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <img class="hero-publico" src="img/svg/publico.svg" alt="" aria-hidden="true" />
+
+        <div class="container-xxl hero-contenido">
+          <span class="badge badge-pulso hero-anim hero-anim-1">2ª tanda · últimas entradas</span>
+
+          <p class="hero-envivo hero-anim hero-anim-1">
+            <span class="ecualizador" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            Luna Vértigo en vivo
+          </p>
+
+          <h1 class="hero-titulo hero-anim hero-anim-2">MAREA AZUL</h1>
+
+          <p class="hero-descripcion hero-anim hero-anim-3">
+            Una noche de pop urbano e indie con el estadio convertido en el fondo del mar.
+          </p>
+
+          <p class="hero-datos hero-anim hero-anim-3">
+            <span>Sáb 12/12</span><span>21 h</span><span>Arena Costanera, Buenos Aires</span>
+          </p>
+
+          <div class="hero-botones hero-anim hero-anim-4">
+            <a class="btn btn-ticket" href="#entradas">
+              <i class="bi bi-ticket-perforated"></i> Comprar entradas
+            </a>
+            <a class="btn btn-borde" href="#lineup">Ver lineup <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </header>
+
+      <!-- ============ BENEFICIOS / EL SHOW ============ -->
+      <section id="show" class="seccion seccion-show">
+        <div class="container-xxl">
+          <div class="seccion-encabezado">
+            <p class="seccion-etiqueta">El show</p>
+            <h2 class="seccion-titulo">Una noche que no se repite</h2>
+            <p class="seccion-bajada">
+              Tres artistas, un estadio a oscuras y luces que se mueven como agua. Esto es lo que te
+              espera el 12 de diciembre.
+            </p>
+          </div>
+
+          <div class="numeros">
+            <div class="numeros-item"><strong>3</strong><span>artistas</span></div>
+            <div class="numeros-item"><strong>4</strong><span>horas de show</span></div>
+            <div class="numeros-item"><strong>1</strong><span>sola fecha</span></div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-3">
+              <article class="card card-beneficio h-100">
+                <div class="beneficio-icono"><i class="bi bi-lightning-charge"></i></div>
+                <h3>Show de luces inmersivo</h3>
+                <p>Pantallas y láseres que convierten el estadio en el fondo del mar.</p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <article class="card card-beneficio h-100">
+                <div class="beneficio-icono"><i class="bi bi-music-note-beamed"></i></div>
+                <h3>3 artistas, 1 noche</h3>
+                <p>DJ Brisa abre, siguen Los Satélites y cierra Luna Vértigo.</p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <article class="card card-beneficio h-100">
+                <div class="beneficio-icono"><i class="bi bi-cup-straw"></i></div>
+                <h3>Zona Marea</h3>
+                <p>Food trucks y bebidas sin alcohol para recargar entre shows.</p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <article class="card card-beneficio h-100">
+                <div class="beneficio-icono"><i class="bi bi-bag-heart"></i></div>
+                <h3>Merch exclusivo</h3>
+                <p>Remeras, buzos y gorros que solo vas a conseguir esa noche.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="ola ola-show-lineup" aria-hidden="true"></div>
+
+      <!-- ============ LINEUP ============ -->
+      <section id="lineup" class="seccion seccion-lineup">
+        <div class="container-xxl">
+          <div class="seccion-encabezado d-md-flex justify-content-between align-items-end">
+            <div>
+              <p class="seccion-etiqueta">Lineup</p>
+              <h2 class="seccion-titulo mb-md-0">Quiénes tocan</h2>
+            </div>
+            <p class="lineup-horario">Puertas 19:30 · Primer show 21:00</p>
+          </div>
+
+          <div class="row g-4">
+            <!-- Headliner -->
+            <div class="col-12">
+              <article class="card card-artista card-headliner">
+                <div class="row g-0 h-100">
+                  <div class="col-12 col-md-6 card-artista-img">
+                    <span class="badge badge-headliner">Headliner</span>
+                    <img src="img/svg/artista-luna-vertigo.svg" alt="Ilustración de Luna Vértigo con micrófono" />
+                  </div>
+                  <div class="col-12 col-md-6 card-artista-cuerpo d-flex flex-column justify-content-center">
+                    <span class="badge badge-hora">23:00</span>
+                    <h3 class="headliner-nombre">Luna<br />Vértigo</h3>
+                    <p class="artista-genero">Pop urbano</p>
+                    <p class="artista-texto">
+                      Cierra la noche con su primer show en estadio: dos horas, banda completa y la
+                      puesta de luces bajo el agua.
+                    </p>
+                    <div>
+                      <a class="btn btn-borde btn-borde-sm" href="#" aria-label="Escuchar a Luna Vértigo en Spotify (link ficticio)">
+                        <i class="bi bi-play-circle"></i> Escuchar en Spotify
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Soportes -->
+            <div class="col-12 col-md-6">
+              <article class="card card-artista h-100">
+                <div class="card-artista-img">
+                  <img src="img/svg/artista-los-satelites.svg" alt="Ilustración de Los Satélites, dúo de indie rock" />
+                </div>
+                <div class="card-artista-cuerpo">
+                  <div class="d-flex justify-content-between align-items-start gap-3">
+                    <h3>Los Satélites</h3>
+                    <span class="badge badge-hora">21:45</span>
+                  </div>
+                  <p class="artista-genero">Indie rock</p>
+                  <a class="link-flecha" href="#">Escuchar en Spotify <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6">
+              <article class="card card-artista h-100">
+                <div class="card-artista-img">
+                  <img src="img/svg/artista-dj-brisa.svg" alt="Ilustración de DJ Brisa con auriculares detrás de la consola" />
+                </div>
+                <div class="card-artista-cuerpo">
+                  <div class="d-flex justify-content-between align-items-start gap-3">
+                    <h3>DJ Brisa</h3>
+                    <span class="badge badge-hora badge-hora-violeta">21:00</span>
+                  </div>
+                  <p class="artista-genero">Set electrónico</p>
+                  <a class="link-flecha" href="#">Escuchar en Spotify <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ENTRADAS ============ -->
+      <section id="entradas" class="seccion seccion-entradas">
+        <div class="container-xxl">
+          <div class="seccion-encabezado text-center">
+            <p class="seccion-etiqueta">Entradas</p>
+            <h2 class="seccion-titulo">Asegurá tu lugar</h2>
+            <span class="badge badge-tanda">2ª tanda activa</span>
+          </div>
+
+          <div class="tanda-agotada">
+            <span>Early bird</span>
+            <s>$35.000</s>
+            <span class="badge badge-agotada">Agotada</span>
+          </div>
+
+          <div class="row g-4 align-items-center entradas-fila">
+            <div class="col-12 col-md-4">
+              <article class="card card-entrada">
+                <h3>General</h3>
+                <p class="entrada-bajada">Para vivirlo en el campo.</p>
+                <p class="precio">$45.000</p>
+                <ul class="lista-check">
+                  <li>Acceso a campo</li>
+                  <li>Los 3 shows</li>
+                  <li>Zona Marea</li>
+                </ul>
+                <button class="btn btn-ticket w-100" type="button" data-bs-toggle="modal" data-bs-target="#modal-compra">
+                  Comprar General
+                </button>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-4 order-first order-md-0">
+              <article class="card card-entrada card-entrada-destacada">
+                <span class="badge badge-elegida">Más elegida</span>
+                <h3>Platea</h3>
+                <p class="entrada-bajada">Asiento numerado con la mejor vista de las luces.</p>
+                <p class="precio precio-destacado">$60.000</p>
+                <ul class="lista-check">
+                  <li>Asiento numerado</li>
+                  <li>Vista completa del show de luces</li>
+                  <li>Los 3 shows</li>
+                  <li>Zona Marea</li>
+                </ul>
+                <button class="btn btn-ticket w-100" type="button" data-bs-toggle="modal" data-bs-target="#modal-compra">
+                  <i class="bi bi-ticket-perforated"></i> Comprar Platea
+                </button>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <article class="card card-entrada card-entrada-vip">
+                <h3>VIP</h3>
+                <p class="entrada-bajada">Lo más cerca posible del escenario.</p>
+                <p class="precio">$90.000</p>
+                <ul class="lista-check">
+                  <li>Campo delantero</li>
+                  <li>Ingreso preferencial</li>
+                  <li>Remera oficial</li>
+                  <li>Pulsera LED</li>
+                </ul>
+                <button class="btn btn-ticket w-100" type="button" data-bs-toggle="modal" data-bs-target="#modal-compra">
+                  Comprar VIP
+                </button>
+              </article>
+            </div>
+          </div>
+
+          <ul class="entradas-avisos">
+            <li><i class="bi bi-credit-card"></i> Hasta 3 cuotas sin interés</li>
+            <li><i class="bi bi-info-circle"></i> Apto todo público, menores de 16 con un adulto</li>
+            <li><i class="bi bi-arrow-counterclockwise"></i> Reembolso hasta 10 días antes</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="ola ola-entradas-merch" aria-hidden="true"></div>
+
+      <!-- ============ MERCH ============ -->
+      <section id="merch" class="seccion seccion-merch">
+        <div class="container-xxl">
+          <div class="seccion-encabezado d-md-flex justify-content-between align-items-end gap-4">
+            <div>
+              <p class="seccion-etiqueta">Merch oficial</p>
+              <h2 class="seccion-titulo mb-md-0">Llevate la marea</h2>
+            </div>
+            <p class="merch-bajada">Reservalo acá y retiralo en el stand la noche del show.</p>
+          </div>
+
+          <div class="row g-3 g-md-4">
+            <div class="col-6 col-lg-4">
+              <article class="card card-merch h-100">
+                <div class="card-merch-img">
+                  <img src="img/svg/merch-remera.svg" alt="Remera negra con la ola de Marea Azul" />
+                </div>
+                <div class="card-merch-cuerpo">
+                  <div class="merch-titulo">
+                    <h3>Remera Ola</h3>
+                    <span class="merch-precio">$25.000</span>
+                  </div>
+                  <p>Algodón, negra, logo en el pecho.</p>
+                  <a class="btn btn-borde btn-borde-sm w-100" href="#modal-merch" data-bs-toggle="modal">
+                    Lo quiero <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </article>
+            </div>
+            <div class="col-6 col-lg-4">
+              <article class="card card-merch h-100">
+                <div class="card-merch-img">
+                  <img src="img/svg/merch-buzo.svg" alt="Buzo con capucha de Marea Azul" />
+                </div>
+                <div class="card-merch-cuerpo">
+                  <div class="merch-titulo">
+                    <h3>Buzo Profundo</h3>
+                    <span class="merch-precio">$48.000</span>
+                  </div>
+                  <p>Con capucha y fecha del show en la espalda.</p>
+                  <a class="btn btn-borde btn-borde-sm w-100" href="#modal-merch" data-bs-toggle="modal">
+                    Lo quiero <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </article>
+            </div>
+            <div class="col-6 col-lg-4">
+              <article class="card card-merch h-100">
+                <div class="card-merch-img">
+                  <img src="img/svg/merch-gorro.svg" alt="Gorro de lana con la ola bordada" />
+                </div>
+                <div class="card-merch-cuerpo">
+                  <div class="merch-titulo">
+                    <h3>Gorro Marea</h3>
+                    <span class="merch-precio">$18.000</span>
+                  </div>
+                  <p>De lana, con la ola bordada.</p>
+                  <a class="btn btn-borde btn-borde-sm w-100" href="#modal-merch" data-bs-toggle="modal">
+                    Lo quiero <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Encuesta -->
+          <div id="encuesta" class="encuesta">
+            <div class="encuesta-icono"><i class="bi bi-chat-heart"></i></div>
+            <div class="encuesta-texto">
+              <h3>Ayudanos a armar la próxima</h3>
+              <p>3 preguntas, menos de un minuto. ¿A quién querés ver?</p>
+            </div>
+            <button class="btn btn-borde" type="button" data-bs-toggle="modal" data-bs-target="#modal-encuesta">
+              Responder encuesta <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FAQ ============ -->
+      <section id="faq" class="seccion seccion-faq">
+        <div class="container-xxl">
+          <div class="seccion-encabezado text-center">
+            <p class="seccion-etiqueta">FAQ</p>
+            <h2 class="seccion-titulo">Antes de comprar</h2>
+          </div>
+
+          <div class="accordion faq" id="faq-acordeon">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" aria-expanded="true" aria-controls="faq-1">
+                  ¿Cuánto salen las entradas?
+                </button>
+              </h3>
+              <div id="faq-1" class="accordion-collapse collapse show" data-bs-parent="#faq-acordeon">
+                <div class="accordion-body">
+                  General $45.000, Platea $60.000 y VIP $90.000. Podés pagar en hasta 3 cuotas sin interés.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2" aria-expanded="false" aria-controls="faq-2">
+                  ¿Cómo llego a Arena Costanera?
+                </button>
+              </h3>
+              <div id="faq-2" class="accordion-collapse collapse" data-bs-parent="#faq-acordeon">
+                <div class="accordion-body">
+                  Está en Costanera Norte. Te dejan cerca los colectivos 33, 37, 45 y 160. Si venís en auto
+                  hay estacionamiento, pero se llena temprano.
+                  <a class="link-flecha" href="https://www.google.com/maps/search/Costanera+Norte+Buenos+Aires" target="_blank" rel="noopener">Ver mapa <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" aria-expanded="false" aria-controls="faq-3">
+                  ¿Hay edad mínima?
+                </button>
+              </h3>
+              <div id="faq-3" class="accordion-collapse collapse" data-bs-parent="#faq-acordeon">
+                <div class="accordion-body">
+                  No. Es apto todo público. Los menores de 16 tienen que ir con un adulto.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4" aria-expanded="false" aria-controls="faq-4">
+                  ¿Puedo pedir el reembolso?
+                </button>
+              </h3>
+              <div id="faq-4" class="accordion-collapse collapse" data-bs-parent="#faq-acordeon">
+                <div class="accordion-body">
+                  Sí, hasta 10 días antes del show. Escribinos a hola@mareaazul.com.ar con tu DNI y el
+                  número de compra.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-5" aria-expanded="false" aria-controls="faq-5">
+                  ¿Qué puedo llevar?
+                </button>
+              </h3>
+              <div id="faq-5" class="accordion-collapse collapse" data-bs-parent="#faq-acordeon">
+                <div class="accordion-body">
+                  Celular, una botella de plástico vacía (hay puntos de agua gratis) y una mochila chica.
+                  No se permiten bebidas, objetos de vidrio ni cámaras profesionales.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="ola ola-footer" aria-hidden="true"></div>
+      <div class="container-xxl">
+        <div class="row g-4 g-lg-5">
+          <div class="col-12 col-md-6 col-lg-3">
+            <a class="logo" href="#inicio">
+              <img src="img/svg/logo-ola.svg" alt="" width="34" height="17" />
+              <span>MAREA AZUL</span>
+            </a>
+            <p class="footer-slogan">Dejate llevar.</p>
+            <p class="footer-hashtag">#MareaAzul26</p>
+            <a class="btn btn-ticket btn-ticket-sm" href="#entradas">Comprar entradas</a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <h2 class="footer-titulo">Navegación</h2>
+            <ul class="footer-lista">
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#show">El show</a></li>
+              <li><a href="#lineup">Lineup</a></li>
+              <li><a href="#entradas">Entradas</a></li>
+              <li><a href="#merch">Merch</a></li>
+              <li><a href="#encuesta">Encuesta</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <h2 class="footer-titulo">Info</h2>
+            <ul class="footer-lista">
+              <li>Arena Costanera</li>
+              <li>Costanera Norte, Buenos Aires</li>
+              <li><a class="footer-destacado" href="https://www.google.com/maps/search/Costanera+Norte+Buenos+Aires" target="_blank" rel="noopener">Cómo llegar</a></li>
+              <li><a href="mailto:hola@mareaazul.com.ar">hola@mareaazul.com.ar</a></li>
+              <li><a href="#faq">Términos y condiciones</a></li>
+              <li><a href="#faq">Reembolsos</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <h2 class="footer-titulo">Seguinos</h2>
+            <div class="redes">
+              <a href="#" aria-label="Instagram (ficticio)"><i class="bi bi-instagram"></i> Instagram</a>
+              <a href="#" aria-label="TikTok (ficticio)"><i class="bi bi-tiktok"></i> TikTok</a>
+              <a href="#" aria-label="Spotify (ficticio)"><i class="bi bi-spotify"></i> Spotify</a>
+              <a href="#" aria-label="YouTube (ficticio)"><i class="bi bi-youtube"></i> YouTube</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-base">
+          <p>TP 03 · Web Design 3 · [Nombre 1] y [Nombre 2]</p>
+          <p>Evento ficticio con fines académicos · 2026</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============ MODAL: COMPRA ============ -->
+    <div class="modal fade modal-marea" id="modal-compra" tabindex="-1" aria-labelledby="modal-compra-titulo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h2 class="modal-title" id="modal-compra-titulo">Comprar entradas</h2>
+              <p class="modal-subtitulo">Marea Azul · Sáb 12/12 · 21 h · Arena Costanera</p>
+            </div>
+            <button type="button" class="btn-cerrar" data-bs-dismiss="modal" aria-label="Cerrar">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="form-compra" id="form-compra" action="#">
+              <div class="mb-3">
+                <label class="form-label" for="compra-nombre">Nombre y apellido</label>
+                <input class="form-control" id="compra-nombre" type="text" placeholder="Ej.: Sofía Pérez" autocomplete="name" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="compra-email">Email</label>
+                <input class="form-control" id="compra-email" type="email" placeholder="tu@mail.com" autocomplete="email" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="compra-dni">DNI</label>
+                <input class="form-control" id="compra-dni" type="text" inputmode="numeric" pattern="[0-9]{7,8}" placeholder="Sin puntos" required />
+              </div>
+              <div class="row g-3 mb-3">
+                <div class="col-8">
+                  <label class="form-label" for="compra-tipo">Tipo de entrada</label>
+                  <select class="form-select" id="compra-tipo" required>
+                    <option value="general">General — $45.000</option>
+                    <option value="platea" selected>Platea — $60.000</option>
+                    <option value="vip">VIP — $90.000</option>
+                  </select>
+                </div>
+                <div class="col-4">
+                  <label class="form-label" for="compra-cantidad">Cantidad</label>
+                  <select class="form-select" id="compra-cantidad" required>
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="compra-terminos" required />
+                <label class="form-check-label" for="compra-terminos">
+                  Acepto los <a href="#faq">términos y condiciones</a> y la política de reembolsos.
+                </label>
+              </div>
+
+              <!-- El total se calcula solo con CSS (:has), según tipo y cantidad elegidos -->
+              <div class="compra-total" aria-live="polite">
+                <span class="total-detalle">
+                  Total · <span class="total-cant"></span> × <span class="total-tipo"></span>
+                </span>
+                <strong class="total-monto"></strong>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-borde" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-ticket" data-bs-target="#modal-confirmacion" data-bs-toggle="modal">
+              <i class="bi bi-ticket-perforated"></i> Confirmar compra
+            </button>
+            <p class="modal-aviso w-100">Compra simulada con fines académicos. No se procesan pagos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ MODAL: CONFIRMACIÓN ============ -->
+    <div class="modal fade modal-marea" id="modal-confirmacion" tabindex="-1" aria-labelledby="modal-confirmacion-titulo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center">
+          <div class="modal-body py-5">
+            <div class="confirmacion-icono"><i class="bi bi-check2"></i></div>
+            <h2 class="modal-title mb-2" id="modal-confirmacion-titulo">¡Listo!</h2>
+            <p class="mb-4">Te mandamos la entrada por mail. Nos vemos bajo el agua el 12/12.</p>
+            <button type="button" class="btn btn-ticket" data-bs-dismiss="modal">Dejate llevar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ MODAL: MERCH ============ -->
+    <div class="modal fade modal-marea" id="modal-merch" tabindex="-1" aria-labelledby="modal-merch-titulo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center">
+          <div class="modal-body py-5">
+            <div class="confirmacion-icono"><i class="bi bi-bag-heart"></i></div>
+            <h2 class="modal-title mb-2" id="modal-merch-titulo">¡Reservado!</h2>
+            <p class="mb-4">Retiralo en el stand de merch la noche del show mostrando tu entrada.</p>
+            <button type="button" class="btn btn-borde" data-bs-dismiss="modal">Seguir mirando</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ MODAL: ENCUESTA ============ -->
+    <div class="modal fade modal-marea" id="modal-encuesta" tabindex="-1" aria-labelledby="modal-encuesta-titulo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h2 class="modal-title" id="modal-encuesta-titulo">Ayudanos a armar la próxima</h2>
+              <p class="modal-subtitulo">3 preguntas · menos de un minuto</p>
+            </div>
+            <button type="button" class="btn-cerrar" data-bs-dismiss="modal" aria-label="Cerrar">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="#">
+              <fieldset class="mb-4">
+                <legend class="form-label">1. ¿Qué género querés que sume la próxima?</legend>
+                <div class="opciones">
+                  <input class="btn-check" type="radio" name="genero" id="genero-trap" />
+                  <label class="opcion" for="genero-trap">Trap</label>
+                  <input class="btn-check" type="radio" name="genero" id="genero-indie" />
+                  <label class="opcion" for="genero-indie">Más indie</label>
+                  <input class="btn-check" type="radio" name="genero" id="genero-electronica" />
+                  <label class="opcion" for="genero-electronica">Electrónica</label>
+                  <input class="btn-check" type="radio" name="genero" id="genero-pop" />
+                  <label class="opcion" for="genero-pop">Pop</label>
+                </div>
+              </fieldset>
+              <fieldset class="mb-4">
+                <legend class="form-label">2. ¿Cuándo preferís que sea?</legend>
+                <div class="opciones">
+                  <input class="btn-check" type="radio" name="fecha" id="fecha-invierno" />
+                  <label class="opcion" for="fecha-invierno">Vacaciones de invierno</label>
+                  <input class="btn-check" type="radio" name="fecha" id="fecha-verano" />
+                  <label class="opcion" for="fecha-verano">Verano</label>
+                  <input class="btn-check" type="radio" name="fecha" id="fecha-primavera" />
+                  <label class="opcion" for="fecha-primavera">Primavera</label>
+                </div>
+              </fieldset>
+              <div class="mb-2">
+                <label class="form-label" for="encuesta-artista">3. ¿A quién querés ver?</label>
+                <input class="form-control" id="encuesta-artista" type="text" placeholder="Tu artista soñado" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-borde" data-bs-dismiss="modal">Ahora no</button>
+            <button type="button" class="btn btn-ticket" data-bs-target="#modal-gracias" data-bs-toggle="modal">
+              Enviar respuestas
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ MODAL: GRACIAS ============ -->
+    <div class="modal fade modal-marea" id="modal-gracias" tabindex="-1" aria-labelledby="modal-gracias-titulo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center">
+          <div class="modal-body py-5">
+            <div class="confirmacion-icono"><i class="bi bi-heart"></i></div>
+            <h2 class="modal-title mb-2" id="modal-gracias-titulo">¡Gracias!</h2>
+            <p class="mb-4">Con tus respuestas armamos la próxima Marea.</p>
+            <button type="button" class="btn btn-borde" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
