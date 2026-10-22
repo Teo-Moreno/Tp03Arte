@@ -28,7 +28,7 @@ Para verlo, abrí `index.html` en el navegador (Bootstrap, Bootstrap Icons y las
 | Media queries | Mobile first con `min-width` en 576, 768, 992 y 1200 px, más `hover: hover` y `prefers-reduced-motion` |
 | Gradients | linear, radial y conic (ver abajo) |
 | Animaciones CSS | Entrada del hero, pulso, ecualizador, burbujas, agua, borde VIP, hovers |
-| Paleta coherente | Variables en `:root` |
+| Paleta coherente | Los mismos 9 colores (tabla de abajo) aplicados en todo `css/styles.css` |
 | Botones de acción | `.btn-ticket` (primario), `.btn-borde` (secundario), `.link-flecha` (texto) |
 
 ## Justificación de decisiones
@@ -65,7 +65,7 @@ Primero la emoción (hero), después las razones (beneficios y lineup) y recién
 - **Accordion** para las preguntas frecuentes.
 - **Badges**, **formularios** (`form-control`, `form-select`, `form-check`, `btn-check`) y **botones**.
 
-Los estilos se pisan cargando `css/styles.css` después de Bootstrap, con variables propias y redefiniendo las de Bootstrap (`--bs-body-bg`, `--bs-accordion-*`, `--bs-modal-*`). Botones, tarjetas, navbar y modales no se ven "de Bootstrap".
+Los estilos se pisan cargando `css/styles.css` después de Bootstrap, con clases propias (`.btn-ticket`, `.card-artista`, `.precio-destacado`…) y ajustando las propiedades de cada componente de Bootstrap (`--bs-accordion-*`, `--bs-modal-*`, `--bs-card-*`). Botones, tarjetas, navbar y modales no se ven "de Bootstrap".
 
 ### Media queries
 | Query | Qué resuelve |
@@ -88,7 +88,7 @@ Los estilos se pisan cargando `css/styles.css` después de Bootstrap, con variab
 | Botón de compra | linear 135°, `#00D4FF` → `#2F6BFF` | Destacar la acción principal |
 | Fondos de secciones | radial violeta/azul al ~20 % | Profundidad, separación entre secciones |
 | Borde de tarjetas en hover | linear cian → violeta | Feedback |
-| Borde de la VIP | **conic**, girando | Exclusividad |
+| Borde de la VIP | **conic** que rota con `transform` detrás de la tarjeta | Exclusividad |
 | Ola separadora e ilustraciones | linear (SVG) | Concepto marino |
 
 ### Animaciones
@@ -112,7 +112,7 @@ Forma de **píldora** (`border-radius: 999px`), como una burbuja, coherente con 
 Estados: hover sube 2 px con glow cian, active vuelve abajo, focus con contorno cian de 3 px. Alto mínimo de 48 px y ancho completo en celular.
 
 ### Un detalle: el total del modal sin JavaScript
-El total de la compra ("Total · 2 × Platea — $120.000") se calcula **solo con CSS**: `:has()` detecta el tipo y la cantidad elegidos en los `<select>`, guarda el precio y la cantidad en variables, y un `counter-reset` con `calc()` multiplica y muestra el resultado en un `::after`.
+El total de la compra ("Total · 2 × Platea — $120.000") se calcula **solo con CSS**: `:has()` detecta el tipo y la cantidad elegidos en los `<select>`, y para cada combinación (3 tipos × 4 cantidades) muestra el texto correspondiente en un `::after`.
 
 ### Qué haríamos distinto
 - Una cuenta regresiva real con JavaScript en lugar del badge de urgencia.
