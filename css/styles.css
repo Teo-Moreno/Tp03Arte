@@ -1,9 +1,3 @@
-@property --angulo {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -78,8 +72,7 @@ img {
 
 .btn-ticket,
 .btn-borde {
-  --bs-btn-padding-x: 1.75rem;
-  --bs-btn-padding-y: 0.7rem;
+  padding: 0.7rem 1.75rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -126,8 +119,7 @@ img {
 }
 
 .btn-ticket-sm {
-  --bs-btn-padding-x: 1.4rem;
-  --bs-btn-padding-y: 0.5rem;
+  padding: 0.5rem 1.4rem;
   min-height: 44px;
 }
 
@@ -162,8 +154,7 @@ img {
 }
 
 .btn-borde-sm {
-  --bs-btn-padding-x: 1.25rem;
-  --bs-btn-padding-y: 0.45rem;
+  padding: 0.45rem 1.25rem;
   font-size: 0.95rem;
   border-color: rgba(0, 212, 255, 0.4);
 }
@@ -204,7 +195,8 @@ img {
 }
 
 .nav-marea {
-  --bs-navbar-padding-y: 14px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   background: rgba(7, 11, 31, 0.72);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -317,25 +309,79 @@ img {
   position: absolute;
   bottom: -40px;
   z-index: -1;
-  width: var(--tam, 12px);
-  height: var(--tam, 12px);
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   border: 1px solid rgba(0, 212, 255, 0.5);
   background: radial-gradient(circle at 30% 30%, rgba(242, 245, 255, 0.5), rgba(0, 212, 255, 0.08) 60%);
   opacity: 0;
-  animation: burbuja var(--dur, 12s) linear infinite;
-  animation-delay: var(--delay, 0s);
+  animation: burbuja 12s linear infinite;
   pointer-events: none;
 }
 
-.hero-burbujas span:nth-child(1) { left: 8%;  --tam: 10px; --dur: 13s; --delay: 0s; }
-.hero-burbujas span:nth-child(2) { left: 18%; --tam: 18px; --dur: 16s; --delay: 3s; }
-.hero-burbujas span:nth-child(3) { left: 32%; --tam: 8px;  --dur: 11s; --delay: 6s; }
-.hero-burbujas span:nth-child(4) { left: 46%; --tam: 14px; --dur: 15s; --delay: 1s; }
-.hero-burbujas span:nth-child(5) { left: 60%; --tam: 22px; --dur: 18s; --delay: 5s; }
-.hero-burbujas span:nth-child(6) { left: 72%; --tam: 9px;  --dur: 12s; --delay: 2s; }
-.hero-burbujas span:nth-child(7) { left: 84%; --tam: 16px; --dur: 14s; --delay: 7s; }
-.hero-burbujas span:nth-child(8) { left: 93%; --tam: 11px; --dur: 17s; --delay: 4s; }
+.hero-burbujas span:nth-child(1) {
+  left: 8%;
+  width: 10px;
+  height: 10px;
+  animation-duration: 13s;
+  animation-delay: 0s;
+}
+
+.hero-burbujas span:nth-child(2) {
+  left: 18%;
+  width: 18px;
+  height: 18px;
+  animation-duration: 16s;
+  animation-delay: 3s;
+}
+
+.hero-burbujas span:nth-child(3) {
+  left: 32%;
+  width: 8px;
+  height: 8px;
+  animation-duration: 11s;
+  animation-delay: 6s;
+}
+
+.hero-burbujas span:nth-child(4) {
+  left: 46%;
+  width: 14px;
+  height: 14px;
+  animation-duration: 15s;
+  animation-delay: 1s;
+}
+
+.hero-burbujas span:nth-child(5) {
+  left: 60%;
+  width: 22px;
+  height: 22px;
+  animation-duration: 18s;
+  animation-delay: 5s;
+}
+
+.hero-burbujas span:nth-child(6) {
+  left: 72%;
+  width: 9px;
+  height: 9px;
+  animation-duration: 12s;
+  animation-delay: 2s;
+}
+
+.hero-burbujas span:nth-child(7) {
+  left: 84%;
+  width: 16px;
+  height: 16px;
+  animation-duration: 14s;
+  animation-delay: 7s;
+}
+
+.hero-burbujas span:nth-child(8) {
+  left: 93%;
+  width: 11px;
+  height: 11px;
+  animation-duration: 17s;
+  animation-delay: 4s;
+}
 
 @keyframes burbuja {
   0% {
@@ -564,9 +610,9 @@ img {
 .card-artista,
 .card-entrada,
 .card-merch {
-  --bs-card-bg: #111839;
-  --bs-card-border-color: rgba(165, 174, 207, 0.16);
-  --bs-card-color: #f2f5ff;
+  background-color: #111839;
+  border-color: rgba(165, 174, 207, 0.16);
+  color: #f2f5ff;
   position: relative;
   border-radius: 20px;
   transition:
@@ -877,28 +923,42 @@ img {
 }
 
 .card-entrada-vip {
-  border-color: transparent;
+  isolation: isolate;
+  overflow: hidden;
+  border: 0;
+}
+
+.card-entrada-vip::before {
+  inset: 2px;
+  z-index: -1;
+  padding: 0;
+  border-radius: 18px;
+  background: #111839;
+  -webkit-mask: none;
+  mask: none;
+  opacity: 1;
 }
 
 .card-entrada-vip::after {
   content: "";
   position: absolute;
-  inset: -2px;
-  padding: 2px;
-  border-radius: inherit;
-  background: conic-gradient(from var(--angulo), #00d4ff, #2f6bff, #7b5cff, #00d4ff);
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+  top: 50%;
+  left: 50%;
+  z-index: -2;
+  width: 300%;
+  aspect-ratio: 1;
+  background: conic-gradient(#00d4ff, #2f6bff, #7b5cff, #00d4ff);
+  transform: translate(-50%, -50%);
   animation: girar 4s linear infinite;
   pointer-events: none;
 }
 
 @keyframes girar {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
   to {
-    --angulo: 360deg;
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
@@ -1015,25 +1075,13 @@ img {
 }
 
 .faq {
-  --bs-accordion-bg: #111839;
-  --bs-accordion-color: #a5aecf;
-  --bs-accordion-border-color: rgba(165, 174, 207, 0.16);
-  --bs-accordion-border-radius: 16px;
-  --bs-accordion-inner-border-radius: 16px;
-  --bs-accordion-btn-color: #f2f5ff;
-  --bs-accordion-btn-bg: #111839;
-  --bs-accordion-active-color: #f2f5ff;
-  --bs-accordion-active-bg: #111839;
-  --bs-accordion-btn-focus-box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.45);
-  --bs-accordion-btn-padding-y: 1.25rem;
-  --bs-accordion-body-padding-y: 0;
-  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23A5AECF' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M3 6l5 5 5-5'/%3e%3c/svg%3e");
-  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2300D4FF' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M3 6l5 5 5-5'/%3e%3c/svg%3e");
   max-width: 860px;
   margin: 0 auto;
 }
 
 .faq .accordion-item {
+  background-color: #111839;
+  color: #a5aecf;
   border-radius: 16px !important;
   border: 1px solid rgba(165, 174, 207, 0.16) !important;
   overflow: hidden;
@@ -1057,15 +1105,32 @@ img {
   font-family: "Inter", system-ui, sans-serif;
   font-weight: 600;
   font-size: 1.05rem;
+  padding: 1.25rem;
+  color: #f2f5ff;
+  background-color: #111839;
   box-shadow: none;
 }
 
+.faq .accordion-button:not(.collapsed) {
+  color: #f2f5ff;
+  background-color: #111839;
+  box-shadow: none;
+}
+
+.faq .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23A5AECF' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M3 6l5 5 5-5'/%3e%3c/svg%3e");
+}
+
+.faq .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2300D4FF' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M3 6l5 5 5-5'/%3e%3c/svg%3e");
+}
+
 .faq .accordion-button:focus-visible {
-  box-shadow: var(--bs-accordion-btn-focus-box-shadow);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.45);
 }
 
 .faq .accordion-body {
-  padding-bottom: 1.25rem;
+  padding: 0 1.25rem 1.25rem;
 }
 
 .faq .accordion-body .link-flecha {
@@ -1190,30 +1255,29 @@ img {
   margin: 0;
 }
 
-.modal-marea {
-  --bs-modal-bg: #111839;
-  --bs-modal-color: #f2f5ff;
-  --bs-modal-border-color: rgba(165, 174, 207, 0.16);
-  --bs-modal-border-radius: 28px;
-  --bs-modal-inner-border-radius: 27px;
-  --bs-modal-padding: 1.5rem 2rem;
-  --bs-modal-header-padding: 2rem 2rem 0.5rem;
-  --bs-modal-header-border-width: 0;
-  --bs-modal-footer-border-width: 0;
-  --bs-modal-footer-gap: 0.75rem;
-  --bs-modal-box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
+.modal-backdrop {
+  background-color: #02040d;
 }
 
-.modal-backdrop {
-  --bs-backdrop-bg: #02040d;
-  --bs-backdrop-opacity: 0.8;
+.modal-backdrop.show {
+  opacity: 0.8;
 }
 
 .modal-marea .modal-content {
-  box-shadow: var(--bs-modal-box-shadow);
+  background-color: #111839;
+  color: #f2f5ff;
+  border-color: rgba(165, 174, 207, 0.16);
+  border-radius: 28px;
+  box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
+}
+
+.modal-marea .modal-body {
+  padding: 1.5rem 2rem;
 }
 
 .modal-marea .modal-header {
+  padding: 2rem 2rem 0.5rem;
+  border-bottom: 0;
   align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
@@ -1237,7 +1301,12 @@ img {
 
 .modal-marea .modal-footer {
   justify-content: flex-end;
+  border-top: 0;
   padding: 0.5rem 2rem 1.75rem;
+}
+
+.modal-marea .modal-footer > * {
+  margin: 0.375rem;
 }
 
 .modal-aviso {
@@ -1316,20 +1385,6 @@ img {
   color: #00d4ff;
 }
 
-.form-compra {
-  --precio: 60;
-  --tipo: "Platea";
-  --cant: 1;
-}
-
-.form-compra:has(#compra-tipo option[value="general"]:checked) { --precio: 45; --tipo: "General"; }
-.form-compra:has(#compra-tipo option[value="platea"]:checked)  { --precio: 60; --tipo: "Platea"; }
-.form-compra:has(#compra-tipo option[value="vip"]:checked)     { --precio: 90; --tipo: "VIP"; }
-.form-compra:has(#compra-cantidad option[value="1"]:checked)   { --cant: 1; }
-.form-compra:has(#compra-cantidad option[value="2"]:checked)   { --cant: 2; }
-.form-compra:has(#compra-cantidad option[value="3"]:checked)   { --cant: 3; }
-.form-compra:has(#compra-cantidad option[value="4"]:checked)   { --cant: 4; }
-
 .compra-total {
   display: flex;
   align-items: center;
@@ -1339,7 +1394,6 @@ img {
   border: 1px solid rgba(47, 107, 255, 0.4);
   border-radius: 14px;
   background: linear-gradient(90deg, rgba(47, 107, 255, 0.22), rgba(47, 107, 255, 0.08));
-  counter-reset: cant var(--cant) total calc(var(--precio) * var(--cant));
 }
 
 .total-detalle {
@@ -1347,12 +1401,32 @@ img {
   font-size: 0.95rem;
 }
 
-.total-cant::after {
-  content: counter(cant);
+.form-compra:has(#compra-tipo option[value="general"]:checked) .total-tipo::after {
+  content: "General";
 }
 
-.total-tipo::after {
-  content: var(--tipo);
+.form-compra:has(#compra-tipo option[value="platea"]:checked) .total-tipo::after {
+  content: "Platea";
+}
+
+.form-compra:has(#compra-tipo option[value="vip"]:checked) .total-tipo::after {
+  content: "VIP";
+}
+
+.form-compra:has(#compra-cantidad option[value="1"]:checked) .total-cant::after {
+  content: "1";
+}
+
+.form-compra:has(#compra-cantidad option[value="2"]:checked) .total-cant::after {
+  content: "2";
+}
+
+.form-compra:has(#compra-cantidad option[value="3"]:checked) .total-cant::after {
+  content: "3";
+}
+
+.form-compra:has(#compra-cantidad option[value="4"]:checked) .total-cant::after {
+  content: "4";
 }
 
 .total-monto {
@@ -1361,8 +1435,52 @@ img {
   font-weight: 800;
 }
 
-.total-monto::after {
-  content: "$" counter(total) ".000";
+.form-compra:has(#compra-tipo option[value="general"]:checked):has(#compra-cantidad option[value="1"]:checked) .total-monto::after {
+  content: "$45.000";
+}
+
+.form-compra:has(#compra-tipo option[value="general"]:checked):has(#compra-cantidad option[value="2"]:checked) .total-monto::after {
+  content: "$90.000";
+}
+
+.form-compra:has(#compra-tipo option[value="general"]:checked):has(#compra-cantidad option[value="3"]:checked) .total-monto::after {
+  content: "$135.000";
+}
+
+.form-compra:has(#compra-tipo option[value="general"]:checked):has(#compra-cantidad option[value="4"]:checked) .total-monto::after {
+  content: "$180.000";
+}
+
+.form-compra:has(#compra-tipo option[value="platea"]:checked):has(#compra-cantidad option[value="1"]:checked) .total-monto::after {
+  content: "$60.000";
+}
+
+.form-compra:has(#compra-tipo option[value="platea"]:checked):has(#compra-cantidad option[value="2"]:checked) .total-monto::after {
+  content: "$120.000";
+}
+
+.form-compra:has(#compra-tipo option[value="platea"]:checked):has(#compra-cantidad option[value="3"]:checked) .total-monto::after {
+  content: "$180.000";
+}
+
+.form-compra:has(#compra-tipo option[value="platea"]:checked):has(#compra-cantidad option[value="4"]:checked) .total-monto::after {
+  content: "$240.000";
+}
+
+.form-compra:has(#compra-tipo option[value="vip"]:checked):has(#compra-cantidad option[value="1"]:checked) .total-monto::after {
+  content: "$90.000";
+}
+
+.form-compra:has(#compra-tipo option[value="vip"]:checked):has(#compra-cantidad option[value="2"]:checked) .total-monto::after {
+  content: "$180.000";
+}
+
+.form-compra:has(#compra-tipo option[value="vip"]:checked):has(#compra-cantidad option[value="3"]:checked) .total-monto::after {
+  content: "$270.000";
+}
+
+.form-compra:has(#compra-tipo option[value="vip"]:checked):has(#compra-cantidad option[value="4"]:checked) .total-monto::after {
+  content: "$360.000";
 }
 
 .confirmacion-icono {
@@ -1442,9 +1560,12 @@ img {
     display: none;
   }
 
-  .modal-marea {
-    --bs-modal-padding: 1.25rem;
-    --bs-modal-header-padding: 1.5rem 1.25rem 0.5rem;
+  .modal-marea .modal-body {
+    padding: 1.25rem;
+  }
+
+  .modal-marea .modal-header {
+    padding: 1.5rem 1.25rem 0.5rem;
   }
 
   .modal-marea .modal-footer {
