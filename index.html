@@ -8,15 +8,7 @@
       name="description"
       content="Marea Azul: una noche de pop urbano e indie con el estadio convertido en el fondo del mar. Sábado 12 de diciembre, Arena Costanera, Buenos Aires."
     />
-    <link rel="icon" href="img/svg/logo-ola.svg" type="image/svg+xml" />
-
-    <!-- Tipografías: Unbounded (títulos) e Inter (textos) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unbounded:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="icon" href="img/png/logo-ola.png" type="image/png" />
 
     <!-- Bootstrap 5.3 + Bootstrap Icons -->
     <link
@@ -38,8 +30,8 @@
     <!-- ============ NAVBAR ============ -->
     <nav class="navbar navbar-expand-lg fixed-top nav-marea" aria-label="Navegación principal">
       <div class="container-xxl">
-        <a class="navbar-brand logo" href="#inicio">
-          <img src="img/svg/logo-ola.svg" alt="" width="34" height="17" />
+        <a class="logo" href="#inicio">
+          <img src="img/png/logo-ola.png" alt="" width="34" height="17" />
           <span>MAREA AZUL</span>
         </a>
         <button
@@ -62,7 +54,7 @@
             <li class="nav-item"><a class="nav-link" href="#merch">Merch</a></li>
             <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
             <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-              <a class="btn btn-ticket btn-ticket-sm" href="#entradas">Entradas</a>
+              <a class="btn-ticket btn-ticket-sm" href="#entradas">Entradas</a>
             </li>
           </ul>
         </div>
@@ -72,11 +64,7 @@
     <main>
       <!-- ============ HERO ============ -->
       <header id="inicio" class="hero">
-        <div class="hero-agua" aria-hidden="true"></div>
-        <div class="hero-burbujas" aria-hidden="true">
-          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-        </div>
-        <img class="hero-publico" src="img/svg/publico.svg" alt="" aria-hidden="true" />
+        <img class="hero-publico" src="img/png/publico.png" alt="" aria-hidden="true" />
 
         <div class="container-xxl hero-contenido">
           <span class="badge badge-pulso hero-anim hero-anim-1">2ª tanda · últimas entradas</span>
@@ -96,10 +84,10 @@
           </p>
 
           <div class="hero-botones hero-anim hero-anim-4">
-            <a class="btn btn-ticket" href="#entradas">
+            <a class="btn-ticket" href="#entradas">
               <i class="bi bi-ticket-perforated"></i> Comprar entradas
             </a>
-            <a class="btn btn-borde" href="#lineup">Ver lineup <i class="bi bi-arrow-right"></i></a>
+            <a class="btn-borde" href="#lineup">Ver lineup <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
       </header>
@@ -175,7 +163,7 @@
                 <div class="row g-0 h-100">
                   <div class="col-12 col-md-6 card-artista-img">
                     <span class="badge badge-headliner">Headliner</span>
-                    <img src="img/svg/artista-luna-vertigo.svg" alt="Ilustración de Luna Vértigo con micrófono" />
+                    <img src="img/png/artista-luna-vertigo.png" alt="Ilustración de Luna Vértigo con micrófono" />
                   </div>
                   <div class="col-12 col-md-6 card-artista-cuerpo d-flex flex-column justify-content-center">
                     <span class="badge badge-hora">23:00</span>
@@ -186,7 +174,7 @@
                       puesta de luces bajo el agua.
                     </p>
                     <div>
-                      <a class="btn btn-borde btn-borde-sm" href="#" aria-label="Escuchar a Luna Vértigo en Spotify (link ficticio)">
+                      <a class="btn-borde btn-borde-sm" href="#" aria-label="Escuchar a Luna Vértigo en Spotify (link ficticio)">
                         <i class="bi bi-play-circle"></i> Escuchar en Spotify
                       </a>
                     </div>
@@ -199,7 +187,7 @@
             <div class="col-12 col-md-6">
               <article class="card card-artista h-100">
                 <div class="card-artista-img">
-                  <img src="img/svg/artista-los-satelites.svg" alt="Ilustración de Los Satélites, dúo de indie rock" />
+                  <img src="img/png/artista-los-satelites.png" alt="Ilustración de Los Satélites, dúo de indie rock" />
                 </div>
                 <div class="card-artista-cuerpo">
                   <div class="d-flex justify-content-between align-items-start gap-3">
@@ -214,7 +202,7 @@
             <div class="col-12 col-md-6">
               <article class="card card-artista h-100">
                 <div class="card-artista-img">
-                  <img src="img/svg/artista-dj-brisa.svg" alt="Ilustración de DJ Brisa con auriculares detrás de la consola" />
+                  <img src="img/png/artista-dj-brisa.png" alt="Ilustración de DJ Brisa con auriculares detrás de la consola" />
                 </div>
                 <div class="card-artista-cuerpo">
                   <div class="d-flex justify-content-between align-items-start gap-3">
@@ -256,7 +244,7 @@
                   <li>Los 3 shows</li>
                   <li>Zona Marea</li>
                 </ul>
-                <button class="btn btn-ticket w-100" type="button" data-bs-toggle="modal" data-bs-target="#modal-compra">
+                <button class="btn-ticket w-100" type="button" data-bs-toggle="modal" data-bs-target="#modal-compra">
                   Comprar General
                 </button>
               </article>
@@ -274,7 +262,7 @@
                   <li>Los 3 shows</li>
                   <li>Zona Marea</li>
                 </ul>
-                <button class="btn btn-ticket w-100" type="button" data-bs-toggle="modal" data-bs-target="#modal-compra">
+                <button class="btn-ticket w-100" type="button" data-bs-toggle="modal" data-bs-target="#modal-compra">
                   <i class="bi bi-ticket-perforated"></i> Comprar Platea
                 </button>
               </article>
@@ -291,7 +279,7 @@
                   <li>Remera oficial</li>
                   <li>Pulsera LED</li>
                 </ul>
-                <button class="btn btn-ticket w-100" type="button" data-bs-toggle="modal" data-bs-target="#modal-compra">
+                <button class="btn-ticket w-100" type="button" data-bs-toggle="modal" data-bs-target="#modal-compra">
                   Comprar VIP
                 </button>
               </article>
@@ -323,7 +311,7 @@
             <div class="col-6 col-lg-4">
               <article class="card card-merch h-100">
                 <div class="card-merch-img">
-                  <img src="img/svg/merch-remera.svg" alt="Remera negra con la ola de Marea Azul" />
+                  <img src="img/png/merch-remera.png" alt="Remera negra con la ola de Marea Azul" />
                 </div>
                 <div class="card-merch-cuerpo">
                   <div class="merch-titulo">
@@ -331,7 +319,7 @@
                     <span class="merch-precio">$25.000</span>
                   </div>
                   <p>Algodón, negra, logo en el pecho.</p>
-                  <a class="btn btn-borde btn-borde-sm w-100" href="#modal-merch" data-bs-toggle="modal">
+                  <a class="btn-borde btn-borde-sm w-100" href="#modal-merch" data-bs-toggle="modal">
                     Lo quiero <i class="bi bi-arrow-right"></i>
                   </a>
                 </div>
@@ -340,7 +328,7 @@
             <div class="col-6 col-lg-4">
               <article class="card card-merch h-100">
                 <div class="card-merch-img">
-                  <img src="img/svg/merch-buzo.svg" alt="Buzo con capucha de Marea Azul" />
+                  <img src="img/png/merch-buzo.png" alt="Buzo con capucha de Marea Azul" />
                 </div>
                 <div class="card-merch-cuerpo">
                   <div class="merch-titulo">
@@ -348,7 +336,7 @@
                     <span class="merch-precio">$48.000</span>
                   </div>
                   <p>Con capucha y fecha del show en la espalda.</p>
-                  <a class="btn btn-borde btn-borde-sm w-100" href="#modal-merch" data-bs-toggle="modal">
+                  <a class="btn-borde btn-borde-sm w-100" href="#modal-merch" data-bs-toggle="modal">
                     Lo quiero <i class="bi bi-arrow-right"></i>
                   </a>
                 </div>
@@ -357,7 +345,7 @@
             <div class="col-6 col-lg-4">
               <article class="card card-merch h-100">
                 <div class="card-merch-img">
-                  <img src="img/svg/merch-gorro.svg" alt="Gorro de lana con la ola bordada" />
+                  <img src="img/png/merch-gorro.png" alt="Gorro de lana con la ola bordada" />
                 </div>
                 <div class="card-merch-cuerpo">
                   <div class="merch-titulo">
@@ -365,7 +353,7 @@
                     <span class="merch-precio">$18.000</span>
                   </div>
                   <p>De lana, con la ola bordada.</p>
-                  <a class="btn btn-borde btn-borde-sm w-100" href="#modal-merch" data-bs-toggle="modal">
+                  <a class="btn-borde btn-borde-sm w-100" href="#modal-merch" data-bs-toggle="modal">
                     Lo quiero <i class="bi bi-arrow-right"></i>
                   </a>
                 </div>
@@ -380,7 +368,7 @@
               <h3>Ayudanos a armar la próxima</h3>
               <p>3 preguntas, menos de un minuto. ¿A quién querés ver?</p>
             </div>
-            <button class="btn btn-borde" type="button" data-bs-toggle="modal" data-bs-target="#modal-encuesta">
+            <button class="btn-borde" type="button" data-bs-toggle="modal" data-bs-target="#modal-encuesta">
               Responder encuesta <i class="bi bi-arrow-right"></i>
             </button>
           </div>
@@ -472,12 +460,12 @@
         <div class="row g-4 g-lg-5">
           <div class="col-12 col-md-6 col-lg-3">
             <a class="logo" href="#inicio">
-              <img src="img/svg/logo-ola.svg" alt="" width="34" height="17" />
+              <img src="img/png/logo-ola.png" alt="" width="34" height="17" />
               <span>MAREA AZUL</span>
             </a>
             <p class="footer-slogan">Dejate llevar.</p>
             <p class="footer-hashtag">#MareaAzul26</p>
-            <a class="btn btn-ticket btn-ticket-sm" href="#entradas">Comprar entradas</a>
+            <a class="btn-ticket btn-ticket-sm" href="#entradas">Comprar entradas</a>
           </div>
 
           <div class="col-12 col-md-6 col-lg-3">
@@ -587,8 +575,8 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-borde" data-bs-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn btn-ticket" form="form-compra">
+            <button type="button" class="btn-borde" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn-ticket" form="form-compra">
               <i class="bi bi-ticket-perforated"></i> Confirmar compra
             </button>
             <p class="modal-aviso w-100">Compra simulada con fines académicos. No se procesan pagos.</p>
@@ -605,7 +593,7 @@
             <div class="confirmacion-icono"><i class="bi bi-check2"></i></div>
             <h2 class="modal-title mb-2" id="modal-confirmacion-titulo">¡Listo!</h2>
             <p class="mb-4">Te mandamos la entrada por mail. Nos vemos bajo el agua el 12/12.</p>
-            <button type="button" class="btn btn-ticket" data-bs-dismiss="modal">Dejate llevar</button>
+            <button type="button" class="btn-ticket" data-bs-dismiss="modal">Dejate llevar</button>
           </div>
         </div>
       </div>
@@ -619,7 +607,7 @@
             <div class="confirmacion-icono"><i class="bi bi-bag-heart"></i></div>
             <h2 class="modal-title mb-2" id="modal-merch-titulo">¡Reservado!</h2>
             <p class="mb-4">Retiralo en el stand de merch la noche del show mostrando tu entrada.</p>
-            <button type="button" class="btn btn-borde" data-bs-dismiss="modal">Seguir mirando</button>
+            <button type="button" class="btn-borde" data-bs-dismiss="modal">Seguir mirando</button>
           </div>
         </div>
       </div>
@@ -671,8 +659,8 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-borde" data-bs-dismiss="modal">Ahora no</button>
-            <button type="button" class="btn btn-ticket" data-bs-target="#modal-gracias" data-bs-toggle="modal">
+            <button type="button" class="btn-borde" data-bs-dismiss="modal">Ahora no</button>
+            <button type="button" class="btn-ticket" data-bs-target="#modal-gracias" data-bs-toggle="modal">
               Enviar respuestas
             </button>
           </div>
@@ -688,7 +676,7 @@
             <div class="confirmacion-icono"><i class="bi bi-heart"></i></div>
             <h2 class="modal-title mb-2" id="modal-gracias-titulo">¡Gracias!</h2>
             <p class="mb-4">Con tus respuestas armamos la próxima Marea.</p>
-            <button type="button" class="btn btn-borde" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn-borde" data-bs-dismiss="modal">Cerrar</button>
           </div>
         </div>
       </div>
