@@ -27,8 +27,8 @@ Para verlo, abrí `index.html` en el navegador (Bootstrap, Bootstrap Icons y las
 | Bootstrap | Grilla, navbar colapsable fija, cards, modales, accordion, badges, formularios, scrollspy |
 | Media queries | Mobile first con `min-width` en 576, 768, 992 y 1200 px, más `hover: hover` y `prefers-reduced-motion` |
 | Gradients | linear, radial y conic (ver abajo) |
-| Animaciones CSS | Entrada del hero, pulso, ecualizador, burbujas, agua, borde VIP, hovers |
-| Paleta coherente | Variables en `:root` |
+| Animaciones CSS | Entrada del hero, pulso, burbujas, agua, borde VIP, hovers |
+| Paleta coherente | Mismos 6 colores (ver tabla) aplicados en todo el CSS |
 | Botones de acción | `.btn-ticket` (primario), `.btn-borde` (secundario), `.link-flecha` (texto) |
 
 ## Justificación de decisiones
@@ -61,11 +61,11 @@ Primero la emoción (hero), después las razones (beneficios y lineup) y recién
 - **Grilla**: beneficios `col-12 col-md-6 col-lg-3`, lineup `col-12` + `col-md-6`, entradas `col-md-4`, merch `col-6 col-lg-4`, footer `col-12 col-md-6 col-lg-3`, dentro de `container-xxl` (máx. 1320 px).
 - **Navbar** `fixed-top` colapsable, con **scrollspy** para marcar la sección activa.
 - **Cards** personalizadas (beneficios, artistas, entradas, merch).
-- **Modales**: compra → confirmación, merch, encuesta → gracias. El paso de un modal al otro usa `data-bs-toggle`, sin JavaScript propio.
+- **Modales**: compra → confirmación, merch, encuesta → gracias. El paso de un modal al otro usa `data-bs-toggle`. La compra es la excepción: el botón "Confirmar compra" envía el formulario, el navegador valida los campos obligatorios (nombre, email, DNI de 7 u 8 números y términos) y recién ahí un script corto abre la confirmación.
 - **Accordion** para las preguntas frecuentes.
 - **Badges**, **formularios** (`form-control`, `form-select`, `form-check`, `btn-check`) y **botones**.
 
-Los estilos se pisan cargando `css/styles.css` después de Bootstrap, con variables propias y redefiniendo las de Bootstrap (`--bs-body-bg`, `--bs-accordion-*`, `--bs-modal-*`). Botones, tarjetas, navbar y modales no se ven "de Bootstrap".
+Los estilos se pisan cargando `css/styles.css` después de Bootstrap, con los colores escritos a mano y redefiniendo variables de componentes de Bootstrap (`--bs-accordion-*`, `--bs-modal-*`, `--bs-card-*`). Botones, tarjetas, navbar y modales no se ven "de Bootstrap".
 
 ### Media queries
 | Query | Qué resuelve |
@@ -96,7 +96,6 @@ Los estilos se pisan cargando `css/styles.css` después de Bootstrap, con variab
 | --- | --- |
 | Entrada escalonada del hero (fade + subida, 0.8 s `cubic-bezier(.2,.8,.2,1)`) | Ordena la lectura: título → descripción → botones |
 | Pulso del badge "2ª tanda" | Urgencia: lleva la mirada a comprar |
-| Ecualizador junto a "En vivo" | Ritmo, sensación de show en vivo |
 | Burbujas y fondo de agua | Crean el clima de "bajo el agua" |
 | Borde cónico giratorio de la VIP | Distingue la entrada premium |
 | Hover: tarjetas suben 8 px, botones suben 2 px con glow, links con subrayado que crece (0.25 s ease-out) | Feedback de interacción |
@@ -116,7 +115,7 @@ El total de la compra ("Total · 2 × Platea — $120.000") se calcula **solo co
 
 ### Qué haríamos distinto
 - Una cuenta regresiva real con JavaScript en lugar del badge de urgencia.
-- Compra conectada a una plataforma de pagos real y validación del formulario.
+- Compra conectada a una plataforma de pagos real.
 - Fotos propias del público en lugar de la foto de Unsplash.
 
 ## Créditos
@@ -124,4 +123,4 @@ El total de la compra ("Total · 2 × Platea — $120.000") se calcula **solo co
 - Ilustraciones SVG propias.
 - Bootstrap 5.3.8, Bootstrap Icons 1.13.1, Google Fonts (Unbounded, Inter).
 
-TP 03 · Web Design 3 · [Nombre 1] y [Nombre 2]
+TP 03 · Web Design 3 · Teo Moreno y Gabriel Papini
