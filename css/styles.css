@@ -59,6 +59,20 @@ img {
   text-decoration: none;
 }
 
+.logo img {
+  animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
 .btn-ticket,
 .btn-borde {
   padding: 0.7rem 1.75rem;
@@ -349,24 +363,6 @@ img {
 .seccion-lineup,
 .seccion-merch {
   background: #0a1030;
-}
-
-.ola {
-  height: 48px;
-  background: url("../img/png/ola.png") 0 50% / 1440px 48px repeat-x;
-  margin: -24px 0;
-  position: relative;
-  z-index: 2;
-  animation: ola 20s linear infinite;
-}
-
-@keyframes ola {
-  from {
-    background-position: 0 50%;
-  }
-  to {
-    background-position: -1440px 50%;
-  }
 }
 
 .card-beneficio,
@@ -800,17 +796,9 @@ img {
 
 .footer {
   position: relative;
-  padding: 72px 0 32px;
+  padding: 64px 0;
   text-align: center;
   background: #050817;
-}
-
-.ola-footer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0;
 }
 
 .footer .logo {
@@ -875,21 +863,6 @@ img {
   font-weight: 600;
   font-size: 0.9rem;
   text-decoration: none;
-}
-
-.footer-base {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-top: 56px;
-  padding-top: 24px;
-  border-top: 1px solid rgba(165, 174, 207, 0.16);
-  color: #a5aecf;
-  font-size: 0.8rem;
-}
-
-.footer-base p {
-  margin: 0;
 }
 
 .modal-backdrop {
@@ -1279,11 +1252,6 @@ img {
 
   .redes {
     justify-content: flex-start;
-  }
-
-  .footer-base {
-    flex-direction: row;
-    justify-content: space-between;
   }
 }
 
