@@ -82,7 +82,6 @@
           <span class="badge badge-pulso hero-anim hero-anim-1">2ª tanda · últimas entradas</span>
 
           <p class="hero-envivo hero-anim hero-anim-1">
-            <span class="ecualizador" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
             Luna Vértigo en vivo
           </p>
 
@@ -519,7 +518,7 @@
         </div>
 
         <div class="footer-base">
-          <p>TP 03 · Web Design 3 · [Nombre 1] y [Nombre 2]</p>
+          <p>TP 03 · Web Design 3 · Teo Moreno y Gabriel Papini</p>
           <p>Evento ficticio con fines académicos · 2026</p>
         </div>
       </div>
@@ -589,7 +588,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-borde" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-ticket" data-bs-target="#modal-confirmacion" data-bs-toggle="modal">
+            <button type="submit" class="btn btn-ticket" form="form-compra">
               <i class="bi bi-ticket-perforated"></i> Confirmar compra
             </button>
             <p class="modal-aviso w-100">Compra simulada con fines académicos. No se procesan pagos.</p>
@@ -700,5 +699,14 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script>
+      // Solo pasa a la confirmación si el formulario es válido
+      document.getElementById("form-compra").addEventListener("submit", (evento) => {
+        evento.preventDefault();
+        bootstrap.Modal.getOrCreateInstance("#modal-compra").hide();
+        bootstrap.Modal.getOrCreateInstance("#modal-confirmacion").show();
+        evento.target.reset();
+      });
+    </script>
   </body>
 </html>
