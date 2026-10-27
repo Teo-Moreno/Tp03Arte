@@ -10,7 +10,7 @@ Sábado 12 de diciembre de 2026, 21 h, Arena Costanera, Buenos Aires. Slogan: _"
 ```
 index.html
 css/styles.css      ← estilos propios, cargados después de Bootstrap
-img/png/            ← logo, ola separadora, ilustraciones de artistas y merch
+img/png/            ← logo e ilustraciones de artistas y merch
 ```
 
 Para verlo, abrí `index.html` en el navegador (Bootstrap y Bootstrap Icons se cargan por CDN). También se puede publicar con GitHub Pages.
@@ -23,11 +23,11 @@ Para verlo, abrí `index.html` en el navegador (Bootstrap y Bootstrap Icons se c
 | Sección informativa (beneficios) | `#show`: franja 3 · 4 · 1 y 4 tarjetas con Bootstrap Icons |
 | Sección complementaria con tarjetas | `#lineup` (headliner + 2 soportes) y `#merch` (3 productos) |
 | Compra de tickets | `#entradas`: General, Platea (más elegida) y VIP, con modal de compra y modal de confirmación |
-| Footer con enlaces e info | Navegación, info/contacto, redes, legales y autores |
+| Footer con enlaces e info | Navegación, info/contacto, redes y legales |
 | Bootstrap | Grilla, navbar colapsable fija, cards, modales, accordion, badges, formularios, scrollspy |
 | Media queries | Mobile first con `min-width` en 576, 768, 992 y 1200 px, más `prefers-reduced-motion` |
 | Gradients | linear y radial en el hero (ver abajo) |
-| Animaciones CSS | Entrada del hero, pulso del badge, olas que se desplazan, ícono de confirmación |
+| Animaciones CSS | Entrada del hero, pulso del badge, logo que flota, ícono de confirmación |
 | Paleta coherente | Mismos 6 colores (ver tabla) aplicados en todo el CSS |
 | Botones de acción | `.btn-ticket` (primario), `.btn-borde` (secundario), `.link-flecha` (texto) |
 
@@ -39,7 +39,7 @@ Sale del concepto **"noche bajo el agua"**: todo en la familia del azul, sobre f
 | Rol | Color | Uso |
 | --- | --- | --- |
 | Primario | `#2F6BFF` azul eléctrico | Platea destacada, badges, detalles |
-| Secundario | `#7B5CFF` violeta | Ilustraciones y olas |
+| Secundario | `#7B5CFF` violeta | Ilustraciones |
 | Acento | `#00D4FF` cian | **Solo** compra y CTA |
 | Fondo | `#070B1F` azul noche | Fondo general |
 | Superficie | `#111839` | Tarjetas y modales |
@@ -75,7 +75,7 @@ Los estilos se pisan cargando `css/styles.css` después de Bootstrap, sin variab
 | `min-width: 768px` | Hero centrado, botones en fila, franja de números en 3 columnas, headliner en 2 columnas, encuesta horizontal, footer alineado a la izquierda |
 | `min-width: 992px` | Navbar expandida, Platea más grande (`scale`) |
 | `min-width: 1200px` | Ajustes de tamaño en pantallas grandes |
-| `prefers-reduced-motion` | Se desactivan las olas, el pulso y las animaciones de entrada |
+| `prefers-reduced-motion` | Se desactivan el logo que flota, el pulso y las animaciones de entrada |
 
 ### Gradients
 La página es sobria: los colores van planos y los gradients quedan solo en el hero.
@@ -90,7 +90,7 @@ La página es sobria: los colores van planos y los gradients quedan solo en el h
 | --- | --- |
 | Entrada escalonada del hero (fade + subida, 0.8 s `cubic-bezier(.2,.8,.2,1)`) | Ordena la lectura: título → descripción → botones |
 | Pulso del badge "2ª tanda" | Urgencia: lleva la mirada a comprar |
-| Olas separadoras que se desplazan de costado (20 s, en loop) | Movimiento suave de agua entre secciones, coherente con el concepto |
+| Ícono del logo que sube y baja 4 px (3 s, en loop) | Movimiento suave, como algo que flota en el agua |
 | Ícono de confirmación que aparece con escala | Refuerza que la compra salió bien |
 
 No hay efectos de hover: la página se ve igual con mouse y en celular. Con `prefers-reduced-motion` se apagan todas las animaciones.
