@@ -10,7 +10,7 @@ Sábado 12 de diciembre de 2026, 21 h, Arena Costanera, Buenos Aires. Slogan: _"
 ```
 index.html
 css/styles.css      ← estilos propios, cargados después de Bootstrap
-img/png/            ← logo, ola separadora, público, ilustraciones de artistas y merch
+img/png/            ← logo, ola separadora, ilustraciones de artistas y merch
 ```
 
 Para verlo, abrí `index.html` en el navegador (Bootstrap y Bootstrap Icons se cargan por CDN). También se puede publicar con GitHub Pages.

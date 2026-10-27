@@ -28,43 +28,44 @@
 
   <body data-bs-spy="scroll" data-bs-target="#nav-principal" data-bs-offset="96" tabindex="0">
     <!-- ============ NAVBAR ============ -->
-    <nav class="navbar navbar-expand-lg fixed-top nav-marea" aria-label="Navegación principal">
-      <div class="container-xxl">
-        <a class="logo" href="#inicio">
-          <img src="img/png/logo-ola.png" alt="" width="34" height="17" />
-          <span>MAREA AZUL</span>
-        </a>
-        <button
-          class="navbar-toggler nav-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#nav-principal"
-          aria-controls="nav-principal"
-          aria-expanded="false"
-          aria-label="Abrir menú"
-        >
-          <i class="bi bi-list"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="nav-principal">
-          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#show">El show</a></li>
-            <li class="nav-item"><a class="nav-link" href="#lineup">Lineup</a></li>
-            <li class="nav-item"><a class="nav-link" href="#entradas">Entradas</a></li>
-            <li class="nav-item"><a class="nav-link" href="#merch">Merch</a></li>
-            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-              <a class="btn-ticket btn-ticket-sm" href="#entradas">Entradas</a>
-            </li>
-          </ul>
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top nav-marea" aria-label="Navegación principal">
+        <div class="container-xxl">
+          <a class="logo" href="#inicio">
+            <img src="img/png/logo-ola.png" alt="" width="34" height="17" />
+            <span>MAREA AZUL</span>
+          </a>
+          <button
+            class="navbar-toggler nav-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#nav-principal"
+            aria-controls="nav-principal"
+            aria-expanded="false"
+            aria-label="Abrir menú"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="nav-principal">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+              <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="#show">El show</a></li>
+              <li class="nav-item"><a class="nav-link" href="#lineup">Lineup</a></li>
+              <li class="nav-item"><a class="nav-link" href="#entradas">Entradas</a></li>
+              <li class="nav-item"><a class="nav-link" href="#merch">Merch</a></li>
+              <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+              <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                <a class="btn-ticket btn-ticket-sm" href="#entradas">Entradas</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
     <main>
       <!-- ============ HERO ============ -->
-      <header id="inicio" class="hero">
-        <img class="hero-publico" src="img/png/publico.png" alt="" aria-hidden="true" />
+      <section id="inicio" class="hero">
 
         <div class="container-xxl hero-contenido">
           <span class="badge badge-pulso hero-anim hero-anim-1">2ª tanda · últimas entradas</span>
@@ -90,7 +91,7 @@
             <a class="btn-borde" href="#lineup">Ver lineup <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
-      </header>
+      </section>
 
       <!-- ============ BENEFICIOS / EL SHOW ============ -->
       <section id="show" class="seccion seccion-show">
