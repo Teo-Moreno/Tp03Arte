@@ -552,6 +552,46 @@ img {
   color: #b9a8ff;
 }
 
+.carrusel-controles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.carrusel-flecha {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(165, 174, 207, 0.35);
+  border-radius: 50%;
+  background: transparent;
+  color: #f2f5ff;
+  font-size: 1.2rem;
+}
+
+.carrusel-puntos {
+  position: static;
+  margin: 0;
+}
+
+.carrusel-puntos [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #a5aecf;
+  opacity: 0.4;
+}
+
+.carrusel-puntos .active {
+  background-color: #00d4ff;
+  opacity: 1;
+}
+
 .badge-tanda {
   padding: 0.7em 1.2em;
   border: 1px solid rgba(0, 212, 255, 0.5);
@@ -939,13 +979,6 @@ img {
   margin: 0.375rem;
 }
 
-.modal-aviso {
-  color: #a5aecf;
-  font-size: 0.8rem;
-  text-align: center;
-  margin: 8px 0 0 !important;
-}
-
 .btn-cerrar {
   display: grid;
   place-items: center;
@@ -964,8 +997,7 @@ img {
   color: #f2f5ff;
 }
 
-.modal-marea .form-control,
-.modal-marea .form-select {
+.modal-marea .form-control {
   min-height: 48px;
   border-radius: 12px;
   border-color: rgba(165, 174, 207, 0.25);
@@ -977,131 +1009,9 @@ img {
   color: rgba(165, 174, 207, 0.7);
 }
 
-.modal-marea .form-control:focus,
-.modal-marea .form-select:focus {
+.modal-marea .form-control:focus {
   border-color: #00d4ff;
   box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.25);
-}
-
-.modal-marea .form-check {
-  padding-left: 2em;
-}
-
-.modal-marea .form-check-input {
-  width: 1.25em;
-  height: 1.25em;
-  margin-left: -2em;
-}
-
-.modal-marea .form-check-input:checked {
-  background-color: #2f6bff;
-  border-color: #2f6bff;
-}
-
-.modal-marea .form-check-input:focus {
-  border-color: #00d4ff;
-  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.25);
-}
-
-.modal-marea .form-check-label a {
-  color: #00d4ff;
-}
-
-.compra-total {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 18px 20px;
-  border: 1px solid rgba(47, 107, 255, 0.4);
-  border-radius: 14px;
-  background: rgba(47, 107, 255, 0.12);
-}
-
-.total-detalle {
-  color: #a5aecf;
-  font-size: 0.95rem;
-}
-
-.form-compra:has(#compra-tipo option[value="general"]:checked) .total-tipo::after {
-  content: "General";
-}
-
-.form-compra:has(#compra-tipo option[value="platea"]:checked) .total-tipo::after {
-  content: "Platea";
-}
-
-.form-compra:has(#compra-tipo option[value="vip"]:checked) .total-tipo::after {
-  content: "VIP";
-}
-
-.form-compra:has(#compra-cantidad option[value="1"]:checked) .total-cant::after {
-  content: "1";
-}
-
-.form-compra:has(#compra-cantidad option[value="2"]:checked) .total-cant::after {
-  content: "2";
-}
-
-.form-compra:has(#compra-cantidad option[value="3"]:checked) .total-cant::after {
-  content: "3";
-}
-
-.form-compra:has(#compra-cantidad option[value="4"]:checked) .total-cant::after {
-  content: "4";
-}
-
-.total-monto {
-  font-size: 1.6rem;
-  font-weight: 800;
-}
-
-.form-compra:has(#compra-tipo option[value="general"]:checked):has(#compra-cantidad option[value="1"]:checked) .total-monto::after {
-  content: "$45.000";
-}
-
-.form-compra:has(#compra-tipo option[value="general"]:checked):has(#compra-cantidad option[value="2"]:checked) .total-monto::after {
-  content: "$90.000";
-}
-
-.form-compra:has(#compra-tipo option[value="general"]:checked):has(#compra-cantidad option[value="3"]:checked) .total-monto::after {
-  content: "$135.000";
-}
-
-.form-compra:has(#compra-tipo option[value="general"]:checked):has(#compra-cantidad option[value="4"]:checked) .total-monto::after {
-  content: "$180.000";
-}
-
-.form-compra:has(#compra-tipo option[value="platea"]:checked):has(#compra-cantidad option[value="1"]:checked) .total-monto::after {
-  content: "$60.000";
-}
-
-.form-compra:has(#compra-tipo option[value="platea"]:checked):has(#compra-cantidad option[value="2"]:checked) .total-monto::after {
-  content: "$120.000";
-}
-
-.form-compra:has(#compra-tipo option[value="platea"]:checked):has(#compra-cantidad option[value="3"]:checked) .total-monto::after {
-  content: "$180.000";
-}
-
-.form-compra:has(#compra-tipo option[value="platea"]:checked):has(#compra-cantidad option[value="4"]:checked) .total-monto::after {
-  content: "$240.000";
-}
-
-.form-compra:has(#compra-tipo option[value="vip"]:checked):has(#compra-cantidad option[value="1"]:checked) .total-monto::after {
-  content: "$90.000";
-}
-
-.form-compra:has(#compra-tipo option[value="vip"]:checked):has(#compra-cantidad option[value="2"]:checked) .total-monto::after {
-  content: "$180.000";
-}
-
-.form-compra:has(#compra-tipo option[value="vip"]:checked):has(#compra-cantidad option[value="3"]:checked) .total-monto::after {
-  content: "$270.000";
-}
-
-.form-compra:has(#compra-tipo option[value="vip"]:checked):has(#compra-cantidad option[value="4"]:checked) .total-monto::after {
-  content: "$360.000";
 }
 
 .confirmacion-icono {
@@ -1246,6 +1156,10 @@ img {
 
   .card-headliner .card-artista-cuerpo {
     padding: 48px;
+  }
+
+  .carrusel-lineup .card-artista > .row {
+    min-height: 500px;
   }
 
   .card-entrada {
